@@ -14,16 +14,10 @@ public class CustomGroundDetector : MonoBehaviour
             transform.SetParent(collision.transform, true);
         }
     }
-
-    private void OnCollisionStay2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         grounded = true;
     }
-
-    /*private void OnTriggerStay2D(Collider2D collision)
-    {
-        grounded = true;
-    }*/
 
     private void OnTriggerExit2D(Collider2D collision)
     {

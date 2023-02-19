@@ -22,7 +22,7 @@ public class PauseGame : MonoBehaviour
         botonPausa.SetActive(true);
         menuPausa.SetActive(false);
     }
-    public void Reset()
+    public void GotoMainMenu()
     {
         SceneManager.LoadScene(0);
     }
