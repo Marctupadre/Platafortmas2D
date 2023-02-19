@@ -46,4 +46,18 @@ public class CustomMovimientoHorizontal : MonoBehaviour
            animator.SetBool("isWalking", false);
         transform.position = transform.position + new Vector3(horizontal * Time.deltaTime, 0, 0);
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovible")
+        {
+            transform.parent = collision.transform;
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "PlataformaMovible")
+        {
+            transform.parent = null;
+        }
+    }
 }

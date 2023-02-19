@@ -24,5 +24,6 @@ public class CustomJump : MonoBehaviour
             GameObject temp = Instantiate(efectoSalto, transform.position, transform.rotation);
             Destroy(temp, 0.3f);
         }
+
     }
 }
